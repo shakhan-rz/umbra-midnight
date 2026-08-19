@@ -1,4 +1,4 @@
-# Midnight Moonshot 🌑→🌕
+# Umbra 🌑→🌕 — verified, anonymous feedback on Midnight
 
 A privacy-first dApp built on the **Midnight** blockchain for the Rise In
 **"New Moon to Full: Monthly Moonshots on Midnight"** program.
@@ -9,6 +9,21 @@ the official `example-hello-world` template and grows through the six moon
 phases below.
 
 > Status: **🌑 Level 1 (New Moon)** — toolchain + first Compact contract.
+
+---
+
+## 💡 The idea — Umbra
+
+**Umbra lets verified members of a community leave honest feedback that is
+provably authentic but completely anonymous.** A person proves — in zero
+knowledge — that they hold a valid membership credential, so their post counts
+as coming from a real, authorized member; yet the contract never learns *which*
+member wrote it. The feedback text is written to public ledger state for
+everyone to read, while the author's identity stays a **private witness** that
+never leaves their device. This is exactly what Midnight is for: the useful
+fact ("a real member said this") is public, and the sensitive fact ("who")
+stays private. Level 1 ships the minimal core — a public message store — and
+later phases add the membership proof, categories, and a Lace-connected UI.
 
 ---
 

@@ -171,6 +171,31 @@ compose.yml                # proof server + node + indexer (Docker)
 
 ---
 
+## 🌑 Level 1 (New Moon) — submission
+
+| Requirement | Where / evidence |
+|---|---|
+| Toolchain installed; contract compiles via `compact compile` | `contracts/hello-world.compact` · [compile screenshot](screenshots/compile.png) |
+| Passing test suite | `src/test/hw.test.ts` (2 tests) · [test screenshot](screenshots/deploy.png) |
+| Generated `managed/` directory (circuits + keys) | `contracts/managed/hello-world/` (built by `compact compile`) |
+| Contract deployed with a visible address | see **Deployment** below · [deploy screenshot](screenshots/deploy.png) |
+| Initial product idea (1 paragraph) | [The idea — Umbra](#-the-idea--umbra) |
+| README explains public state vs private witness | [that section](#-public-ledger-state-vs--private-witness) |
+| Public GitHub repo + README + setup instructions | this repo |
+| Minimum 5 meaningful commits | `git log` |
+
+### Deployment
+
+| | |
+|---|---|
+| **Network** | _to be filled after the Preprod/Preview deploy_ |
+| **Contract address** | _to be filled_ |
+| **Contract source** | `contracts/hello-world.compact` |
+
+> Screenshots live in [`screenshots/`](screenshots/).
+
+---
+
 ## 🔗 References
 - [Midnight docs](https://docs.midnight.network/)
 - [Install the toolchain](https://docs.midnight.network/getting-started/installation)

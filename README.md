@@ -130,6 +130,28 @@ export circuit storeMessage(newMessage: Opaque<"string">): [] {
 Circuit inputs are **private by default** on Midnight; `disclose()` explicitly
 marks a value as safe to write to public ledger state.
 
+### 🔓 Public ledger state vs 🔒 private witness
+
+This tiny contract already shows the core Midnight distinction the whole
+program is built around:
+
+- **`ledger message`** is **public ledger state**. It is stored on-chain, in the
+  clear, and anyone can read it. Writing here is a deliberate act of publishing.
+- **`newMessage` (the circuit parameter)** is a **private witness**. On Midnight
+  every circuit input is private by default — it exists only inside the
+  zero-knowledge proof generated on the user's machine and is *never* sent to
+  the chain. The network verifies the proof was computed correctly without ever
+  seeing the input.
+- **`disclose()`** is the one-way gate between the two. Assigning a private value
+  straight into public `ledger` state is a **compile error** on purpose;
+  `disclose(newMessage)` is the developer stating, explicitly, "I intend this
+  particular value to become public." Everything not disclosed stays private.
+
+In **Umbra** this is the whole product: the feedback text is `disclose()`d into
+public state so everyone can read it, while the author's membership credential
+is a private witness that proves they are allowed to post **without** the
+contract ever learning who they are.
+
 ---
 
 ## 📂 Structure

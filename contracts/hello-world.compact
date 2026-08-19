@@ -1,0 +1,13 @@
+pragma language_version 0.23;
+
+// First Compact contract — Level 1 (New Moon).
+//
+// A minimal on-chain message store. `message` is public, persistent ledger
+// state. `storeMessage` takes a private parameter and uses disclose() to mark
+// it safe to write to public state — Compact treats every circuit input as
+// private by default, which is the whole point of building on Midnight.
+export ledger message: Opaque<"string">;
+
+export circuit storeMessage(newMessage: Opaque<"string">): [] {
+  message = disclose(newMessage);
+}

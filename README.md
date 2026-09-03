@@ -8,7 +8,31 @@ the **Lace** wallet, and a Docker-based **proof server**. This repo starts from
 the official `example-hello-world` template and grows through the six moon
 phases below.
 
-> Status: **🌑 Level 1 (New Moon)** — toolchain + first Compact contract.
+> Status: **🌑 Level 1 (New Moon)** — toolchain + first Compact contract, deployed live on Preview.
+
+---
+
+## 🚀 Deployment (Preview testnet)
+
+The `hello-world` contract is compiled to zero-knowledge circuits and deployed
+live on the Midnight **Preview** network, signed by a wallet funded from the
+Preview faucet.
+
+| | |
+|---|---|
+| **Network** | Midnight Preview (`preview`) |
+| **Contract address** | `a4bfcd01a8dcc0889676d80f7e1bab61761a1f906209c82489434e7f3378707b` |
+| **Circuit** | `storeMessage` (k=6, rows=26) |
+| **Deploy + interact tests** | `Deploys the contract` ✅ · `Stores Hello World!` ✅ (2/2 passing) |
+
+Reproduce with `yarn test:preview` after funding the wallet's unshielded
+address (printed by `MIDNIGHT_NETWORK=preview vite-node scripts/print-address.ts`)
+at the [Preview faucet](https://midnight-tmnight-preview.nethermind.dev/).
+
+> Note on the faucet: the address Lace shows for a recovery phrase is **not**
+> the address the test wallet (built from the same phrase via the testkit)
+> uses. `scripts/print-address.ts` prints the exact unshielded address to fund,
+> which is what made the live deploy work.
 
 ---
 

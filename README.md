@@ -34,6 +34,17 @@ at the [Preview faucet](https://midnight-tmnight-preview.nethermind.dev/).
 > uses. `scripts/print-address.ts` prints the exact unshielded address to fund,
 > which is what made the live deploy work.
 
+### Screenshots
+
+**Compile — circuits listed**
+![Compile output](./screenshots/compile.png)
+
+**Deploy — live on Preview with a contract address, tests passing**
+![Deploy output](./screenshots/deploy.png)
+
+**The Compact contract**
+![Contract source](./screenshots/contract.png)
+
 ---
 
 ## 💡 The idea — Umbra

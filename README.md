@@ -47,6 +47,24 @@ at the [Preview faucet](https://midnight-tmnight-preview.nethermind.dev/).
 
 ---
 
+## 🌒 Level 2 (Waxing Crescent) — the frontend dApp
+
+Level 2 gives Umbra a face: a **React frontend** wired to a Compact contract,
+signed by the **Lace** wallet in the browser, deployed on **Preprod**. It lives
+in **[`umbra-app/`](./umbra-app)** and is built on the official
+[`example-bboard`](https://github.com/midnightntwrk/example-bboard) template,
+adapted into Umbra.
+
+The **observable privacy behavior**: anyone can post a message publicly, but
+only the original poster can take it down — proven in zero knowledge via a
+private `localSecretKey` witness that is **never** revealed on-chain (only its
+hash is). The network verifies "the real owner did this" without learning who.
+
+See **[`umbra-app/README.md`](./umbra-app/README.md)** for the full privacy
+claim, the Lace/Midnight.js wiring, and how to run it.
+
+---
+
 ## 💡 The idea — Umbra
 
 **Umbra lets verified members of a community leave honest feedback that is
